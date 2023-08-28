@@ -1,0 +1,89 @@
+<html>
+<head>
+<title> Form Validation </title>
+<script>
+function validateForm()
+{
+//collect form data
+var name1 = document.getElementById("fname").value;
+var name2 = document.getElementById("lname").value;
+var emailId = document.getElementById("emailId").value;
+var pw1 = document.getElementById("pswd1").value;
+var pw2 = document.getElementById("pswd2").value;
+var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//check empty first name field
+if(name1 == "")
+{
+document.getElementById("Fmsg").innerHTML = "**Fill the first
+name";
+return false;
+}
+if(name2 == "")
+{
+document.getElementById("Lmsg").innerHTML = "Fill the Last
+name";
+return false;
+}
+if(emailId == "")
+{
+document.getElementById("Emsg").innerHTML = "**Enter Email id";
+return false;
+}
+if(!regex.test(emailId))
+{
+document.getElementById("Emsg").style.color = "red";
+document.getElementById("Emsg").innerHTML = "Incorrect Email Id ";
+return false;
+}
+//check empty password field
+if(pw1 == "")
+{
+document.getElementById("Pmsg").innerHTML = "**Fill the
+password please!";
+return false;
+}
+//check empty confirm password field
+if(pw2 == "")
+{
+document.getElementById("CPmsg").innerHTML = "**Enter the
+password please!";
+return false;
+}
+if(pw1 != pw2)
+{
+document.getElementById("CPmsg").innerHTML = "**Passwords are
+not same";
+return false;
+}
+else
+{
+alert (" Data entered successfully");
+document.write("JavaScript form has been submitted successfully");
+}
+}
+</script>
+</head>
+<body>
+<center>
+<h1> Form Validation </h1>
+<form onsubmit ="return validateForm()" >
+<!-- Enter first name -->
+First Name* <input type = "text" id = "fname" value = "">
+<p id = "Fmsg" style="color:red"></p>
+<!-- Enter last name -->
+Last Name<input type = "text" id = "lname" value = "">
+<p id = "Lmsg" style="color:red"></p>
+Email Address: <input type="text" id="emailId" >
+<p id = "Emsg" style="color:red"></p>
+<!-- Create a new password -->
+Create Password*<input type = "password" id = "pswd1" value = "">
+<p id = "Pmsg" style="color:red"></p>
+<!?Enter confirm password -->
+Confirm Password*<input type = "password" id = "pswd2" value = "">
+<p id = "CPmsg" style="color:red"></p>
+<!-- Click to verify valid password -->
+<input type = "submit" value = "Submit">
+</form>
+</center>
+</body>
+</html>

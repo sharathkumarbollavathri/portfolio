@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>To Do List</title>
+<style>
+h1
+{
+text-align:center;
+display:flex;
+justify-content:center;
+}
+.mydiv
+{
+background-color: rgb(240, 57, 169);
+border:4px solid black;
+padding:10px;
+}
+input
+{
+width:700px;
+padding:10px;
+width:90%;
+}
+ul
+{
+margin: 0px;
+padding: 0px;
+}
+ul li
+{
+border:0.5px solid black;
+background-color:lightblue;
+font-family: cursive;
+height:30px;
+width:1242px;
+list-style-type: none;
+padding:10px;
+}
+.btn
+{
+cursor: pointer;
+text-align: center;
+padding: 10px;
+border:1px solid black;
+position:relative;
+left:10px;
+}
+.btn:hover
+{
+background-color: rgb(22, 205, 238);
+border:2px solid black;
+}
+.close
+{
+cursor: pointer;
+border:1px solid black;
+height: 20px;
+width:20px;
+padding: 5px;
+text-align: center;
+position:absolute;
+left: 1200px;
+}
+.close:hover
+{
+background-color: antiquewhite;
+border:2px solid black;
+}
+</style>
+</head>
+<body>
+<div class="mydiv">
+<span><h1>My To Do List</h1></span>
+<input type="text" id="myinputid" placeholder="Enter your to do list">
+<span onclick="newElement()" class="btn">Add</span>
+</div>
+<br>
+<div class="cont">
+<ul id="mylist">
+</ul>
+</div>
+<script>
+function newElement()
+{//creating list
+var ele=document.createElement("li");
+var inputval=document.getElementById("myinputid").value;
+var insert=document.createTextNode(inputval);
+ele.appendChild(insert);
+if(inputval==""||inputval==null)
+{
+alert("You Must Enter Something");
+}
+else
+{
+document.getElementById("mylist").appendChild(ele);
+}
+document.getElementById("myinputid").value="";//to remove the 
+current to do list item after clicking add button.
+//creating X button
+var spx=document.createElement("span");
+var btnX=document.createTextNode("X");
+spx.className="close";
+spx.appendChild(btnX);
+ele.appendChild(spx);
+var f=document.getElementsByClassName("close");
+var i;
+for(i=0;i<f.length;i++)
+{
+f[i].onclick=function()
+{
+this.parentElement.style.display="none";
+}
+}
+}
+</script>
+</body>
+</html
