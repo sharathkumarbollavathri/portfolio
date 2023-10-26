@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="task4.css">
+ </head>
+ <body>
+    <div class="card">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Add a new task">
+        <button id="addTask">Add</button>
+        <ul id="taskList"></ul>
+        <button id="clearCompleted">Clear Completed</button>
+    </div>
+    <script>
+        const taskInput = document.getElementById("taskInput");
+        const addTaskButton = document.getElementById("addTask");
+        const taskList=document.getElementById("taskList");
+        const clearCompletedButton=document.getElementById("clearCompleted");
+
+        addTaskButton.addEventListener("click",function() {
+            const taskText = taskInput.value.trim();
+            if (taskText !== ""){
+                addTask(taskText, false);
+                taskInput.value = "";
+            }});
+        function addTask(text, isCompleted){
+            const taskItem=document.createElement("li");
+            taskItem.textContent = text;
+            taskItem.className = isCompleted ? "completed" : "not-completed";
+            taskItem.addEventListener("click", toggleTask);
+            taskList.appendChild(taskItem);
+        }
+
+        function toggleTask(event){
+            const taskItem=event.target;
+            taskItem.classList.toggle("completed");
+            taskItem.classList.toggle("not-completed");
+        }
+
+        clearCompletedButton.addEventListener("click", function(){
+            const completedTasks = taskList.getElementsByClassName("completed");
+            while (completedTasks.length > 0){
+                completedTasks[0].remove();
+            }});
+    </script>
+</body> 

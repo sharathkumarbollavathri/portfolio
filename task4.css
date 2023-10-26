@@ -1,0 +1,82 @@
+/* *{ */
+    /* background: linear-gradient(black,red); */
+/* } */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    margin: 0;
+}
+
+.card{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+}
+
+#taskList{
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li{
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor:pointer ;
+    position: relative;
+
+}
+
+.completed{
+    background-color: #a7e6a3;
+    border-color: #7bc97c;
+    color: #4e8c4f;
+}
+
+.not-completed{
+    background-color: #ffadad;
+    border-color: #ff6b6b;
+    color: #b02828;
+}
+
+#taskList li:hover{
+    transform: scale(1.03);
+
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#clearCompleted{
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#clearCompleted:hover{
+    background-color: #ff0000;
+}
+
+#taskInput{
+    width:70%;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+
+#addTask:hover{
+    background-color: #45a049;
+}
