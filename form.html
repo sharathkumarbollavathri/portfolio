@@ -14,14 +14,12 @@ var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 //check empty first name field
 if(name1 == "")
 {
-document.getElementById("Fmsg").innerHTML = "**Fill the first
-name";
+document.getElementById("Fmsg").innerHTML = "**Fill the first name";
 return false;
 }
 if(name2 == "")
 {
-document.getElementById("Lmsg").innerHTML = "Fill the Last
-name";
+document.getElementById("Lmsg").innerHTML = "Fill the Last name";
 return false;
 }
 if(emailId == "")
@@ -38,21 +36,18 @@ return false;
 //check empty password field
 if(pw1 == "")
 {
-document.getElementById("Pmsg").innerHTML = "**Fill the
-password please!";
+document.getElementById("Pmsg").innerHTML = "**Fill the password please!";
 return false;
 }
 //check empty confirm password field
 if(pw2 == "")
 {
-document.getElementById("CPmsg").innerHTML = "**Enter the
-password please!";
+document.getElementById("CPmsg").innerHTML = "**Enter the password please!";
 return false;
 }
 if(pw1 != pw2)
 {
-document.getElementById("CPmsg").innerHTML = "**Passwords are
-not same";
+document.getElementById("CPmsg").innerHTML = "**Passwords are not same";
 return false;
 }
 else
@@ -78,7 +73,7 @@ Email Address: <input type="text" id="emailId" >
 <!-- Create a new password -->
 Create Password*<input type = "password" id = "pswd1" value = "">
 <p id = "Pmsg" style="color:red"></p>
-<!?Enter confirm password -->
+<!--Enter confirm password -->
 Confirm Password*<input type = "password" id = "pswd2" value = "">
 <p id = "CPmsg" style="color:red"></p>
 <!-- Click to verify valid password -->
