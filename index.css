@@ -1,89 +1,123 @@
-body,html {
-    margin: 0%;
-    font: bold 14px/1.4 'Open Sans', arial, sans-serif;
-    background: #000;
-    height: auto;
-}
-h1{
-    color: #98f5ff;
-    text-transform: uppercase;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    /* margin: 5%; */
-}
-h2{
-    color:#c1102b;
-    text-transform: capitalize;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    text-align: center;
-}
-p{
-    /* margin: 2%; */
-    color: white;
-    font-size: x-large;
-    text-align: center;
-    letter-spacing: 0.15em;
-}
- ul {  
-    margin: 50px auto 0; 
-    padding: 0; 
-    list-style: none; 
-    display: table;
-    width: 600px;
-    text-align: center;
-}
- li {  
-    display:table-cell; 
-    position: relative; 
-    padding: 15px 0;
-}
-a {
-    color: black;
-    text-transform: uppercase;
-    text-decoration:none;
-    letter-spacing: 0.15em;
-    display:inline-block;
-    padding: 15px 20px;
-    position: relative;
-    text-shadow: 0 0 #000, 0 1.2em rgb(248, 246, 246);
-    overflow: hidden;
-    
-}
- a:after {    
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-   
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-}
-a:hover:after { 
-    width: 100%; 
-    left: 0; 
-    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 
 }
-a:hover{
-    color:#7fffd4;
-    text-shadow: 0 -1.2em #000 , 0 0 #c1102b ;
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(45deg, #0a0a0a, #3a4452);
+}
 
+.calculator{
+    border:1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+
+input{
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: #ffffff;
+}
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background:transparent ;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 
 }
-@media screen and (max-height: 300px) {
-    ul {
-      margin-top: 40px;
-    }
-} 
+.equalBtn{
+    background-color: #fb7c14;
+}
 
+.operator{
+    color: #6dee0a;
 
-img{
-    display: block;
-    size: 2px;
-    
+}@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.calculator{
+    border:1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+
+input{
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: #ffffff;
+}
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background:transparent ;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+
+}
+.equalBtn{
+    background-color: #fb7c14;
+}
+
+.operator{
+    color: #6dee0a;
+
 }
